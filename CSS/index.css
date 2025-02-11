@@ -52,7 +52,7 @@ header nav {
   align-items: center;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 99999999999;
 }
 
@@ -67,7 +67,7 @@ header nav ul.mobile-nav {
   row-gap: 1rem;
   position: fixed;
   background-color: var(--bg-light);
-  width: 100%;
+  width: 100vw;
   top: 90px;
   padding: 20px 10px;
   transform: translateY(-400px);
@@ -259,6 +259,59 @@ header #hero .hero__two img {
   width: 100%;
   height: 60%;
   border-radius: 15px;
+}
+
+#order {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+#order h2 {
+  font-size: 2.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+#order h2 span {
+  color: var(--bg-wine);
+}
+
+#order h2::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-wine);
+  bottom: -8px;
+  left: 0;
+}
+
+#order h2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  border-radius: 10px;
+  border: 2px solid var(--bg-wine);
+  bottom: -5px;
+  left: 15px;
+}
+
+#order #menu-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+#order #menu-container .food-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
+}
+
+#order #menu-container .food-container .food-name {
+  font-size: 1.2rem;
 }
 /* MEDIUM SCREENS */
 @media (min-width: 768px) {
