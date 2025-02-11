@@ -23,7 +23,9 @@ html {
   scroll-padding-top: 60px;
   overflow-x: hidden;
 }
-
+body {
+  overflow-x: hidden;
+}
 /* Utility Styling */
 .button {
   color: var(--text-white);
