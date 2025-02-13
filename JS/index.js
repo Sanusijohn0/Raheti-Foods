@@ -20,63 +20,63 @@ navbarTogler.addEventListener("click", () => {
 const foods = [
   {
     id: 1,
-    name: "jollof rice",
+    name: "Jollof Rice",
     price: "6500",
-    imgUrl: "../img/food.jpg",
+    imgUrl: "img/food.jpg",
   },
   {
     id: 2,
-    name: "fried rice",
+    name: "Fried Rice",
     price: "9000",
-    imgUrl: "../img/food.jpg",
+    imgUrl: "img/food.jpg",
   },
   {
     id: 3,
-    name: "ofada rice",
+    name: "0fada Rice",
     price: "1000",
-    imgUrl: "../img/food.jpg",
+    imgUrl: "img/food.jpg",
   },
   {
     id: 4,
-    name: "semo",
+    name: "Semo",
     price: "5000",
-    imgUrl: "../img/food.jpg",
+    imgUrl: "img/food.jpg",
   },
   {
     id: 5,
-    name: "amala & ewedu",
+    name: "Amala & Ewedu",
     price: "7000",
-    imgUrl: "../img/food.jpg",
+    imgUrl: "img/food.jpg",
   },
   {
     id: 6,
-    name: "yam Porriage",
+    name: "Yam Porriage",
     price: "2000",
-    imgUrl: "../img/food.jpg",
+    imgUrl: "img/food.jpg",
   },
   {
     id: 7,
-    name: "fufu & egusi",
+    name: "Fufu & Egusi",
     price: "10000",
-    imgUrl: "../img/food.jpg",
+    imgUrl: "img/food.jpg",
   },
   {
     id: 8,
-    name: "eba & okra",
+    name: "Eba & Okra",
     price: 3000,
-    imgUrl: "../img/food.jpg",
+    imgUrl: "img/food.jpg",
   },
   {
     id: 9,
-    name: "amala & efo",
+    name: "Amala & Efo",
     price: 3000,
-    imgUrl: "../img/food.jpg",
+    imgUrl: "img/food.jpg",
   },
   {
     id: 10,
-    name: "banga & starch",
+    name: "Banga & Starch",
     price: 3000,
-    imgUrl: "../img/food.jpg",
+    imgUrl: "img/food.jpg",
   },
 ];
 
@@ -115,14 +115,20 @@ foods.forEach((food) => {
 const search = document.getElementById("search");
 
 search.addEventListener("click", () => {
-  document.location.replace("index.html#order");
-  document.getElementById("searchbar").classList.remove("none");
+  document.location.href = "index.html#order";
+  setTimeout(() => {
+    document.getElementById("searchbar").classList.remove("none");
+  }, 2000);
 });
 
-document.querySelector("body").addEventListener("scroll", () => {
+const body = document.querySelector("main");
+body.onclick = () => {
+  document.getElementById("searchbar").classList.add("none");
+};
+
+body.addEventListener("scroll", () => {
   document.getElementById("searchbar").classList.add("none");
 });
-
 const input = document.querySelector("#search-input");
 input.addEventListener("keyup", () => {
   const searchText = input.value;
