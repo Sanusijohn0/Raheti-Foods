@@ -44,6 +44,54 @@ body {
 .button:hover {
   filter: brightness(2);
 }
+.search-container {
+  position: fixed;
+  top: 16%;
+  left: 5%;
+  width: 90%;
+  height: 50px;
+  background-color: #f5f5f5;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  z-index: 9999999999999999999;
+}
+
+.none {
+  display: none;
+}
+
+.search-container input {
+  background: none;
+  height: 100%;
+  width: 70%;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.search-container span {
+  background-color: var(--bg-wine);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-white);
+  font-size: 1rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.search-container span:hover {
+  filter: brightness(1.4);
+}
 
 /* Main Styling */
 header nav {
@@ -305,15 +353,64 @@ header #hero .hero__two img {
   row-gap: 1rem;
 }
 
-#order #menu-container .food-container {
+#order #menu-container .menu-card {
   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.4rem;
+  box-shadow: 1px 1px 2px #333;
+  padding: 13px;
+  border-radius: 10px;
+}
+#order #menu-container .menu-card .food-img {
+  width: 50%;
+  border-radius: 10px;
+}
+#order #menu-container .menu-card .wrapper {
+  width: 50%;
   display: flex;
   flex-direction: column;
   row-gap: 0.4rem;
+  padding: 0 5px;
+}
+#order #menu-container .menu-card .wrapper .food-name {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  box-sizing: content-box;
+}
+#order #menu-container .menu-card .wrapper .food-price {
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
-#order #menu-container .food-container .food-name {
-  font-size: 1.2rem;
+#order #menu-container .menu-card .wrapper .quantity {
+  border: 1px solid #333;
+  border-radius: 3px;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 2px 5px;
+  background: none;
+}
+
+#order #menu-container .menu-card .wrapper button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: var(--text-white);
+  background-color: var(--bg-wine);
+  padding: 4px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+#order #menu-container .menu-card .wrapper button:hover {
+  transform: scale(1.02);
+  filter: brightness(1.5);
 }
 /* MEDIUM SCREENS */
 @media (min-width: 768px) {
@@ -528,5 +625,32 @@ header #hero .hero__two img {
   #about .about__two img {
     width: 75%;
     height: 100%;
+  }
+
+  #order #menu-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  #order #menu-container .menu-card {
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 0.4rem;
+    box-shadow: 1px 1px 2px #333;
+    padding: 13px;
+    border-radius: 10px;
+  }
+  #order #menu-container .menu-card .wrapper .food-name {
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+  }
+  #order #menu-container .menu-card .wrapper .food-price {
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    font-weight: 400;
   }
 }
